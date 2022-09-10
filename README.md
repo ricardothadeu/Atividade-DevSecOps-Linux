@@ -21,7 +21,7 @@ INSERIR IMAGEM
 6. Por último, devemos escolher o tamanho que esse disco rígido virtual terá. Na atividade foram definidos 30 GB de disco. Clicar em Create.  
 
 A máquina virtual foi criada. Agora devemos fazer algumas configurações nessa VM. Para isso, clique em Settings (ou usar o atalho Ctrl+S).  
-Aqui podemos fazer algumas configurações interessantes. Por exemplo, em `System &rarr; Motherboard` podemos alterar a quantidade de memória alocada para a máquina virtual.  
+Aqui podemos fazer algumas configurações interessantes. Por exemplo, em `System > Motherboard` podemos alterar a quantidade de memória alocada para a máquina virtual.  
 Uma etapa essencial é carregar na máquina virtual a iso do Oracle Linux que foi baixada anteriormente. Para isso, vamos em `Storage`  
 
 INSERIR IMAGEM  
@@ -36,8 +36,16 @@ Feitas essas configurações, clique em Ok. De volta à tela inicial do VirtualB
 
 # Instalando o Oracle Linux
 
-
-
+Pressione a tecla Enter na opção `Install Oracle Linux 8.6.0`.  
+A primeira etapa é selecionar o idioma. É uma boa práticar instalar o sistema operacional em inglês, pois dessa forma podemos obter novas atualizações de forma mais rápida. Portanto, selecione `English (United States)`.  
+Agora estamos na tela de sumário da instalação. Podemos começar alterando o idioma do teclado. Em `Keyboard Layout`, clica no sinal de +. Procure a opção `Portuguese (Brazil)` e clique em `Add`. Selecione a opção `English (US)` e clique no sinal de `-`. Clique em `Done`. Desta forma, nosso sistema já entenderá que o teclado é em português.  
+Podemos configurar também a data e a hora do sistema. Selecione a região Américas e a cidade que melhor se encaixa na sua situação. Nesta atividade, foi selecionada a cidade de São Paulo, horário de Brasília. Clique em `Done`.  
+Prosseguindo em nossa instalação, devemos selecionar o tipo de instalação que desejamos para o sistema operacional. Em `Software Selection`, selecione a opção `Minimal Install`. Ou seja, estamos instalando o Oracle Linux sem interface gráfica. Clique em `Done`.  
+O próximo passo é selecionar o disco no qual será feita a instalação do Oracle Linux. Para isso, vamos na opção `Installation Destination`. Em `Local Standard Disks`, selecionamos o disco disponível, que foi o disco que criamos alguns passos atrás. Em `Storage Configuration`, podemos selecionar a opção 
+`Automatic`, na qual o próprio sistema decide o tamanho das partições que serão criadas no disco, ou a opção `Custom`, na qual nós criamos as partições de acordo com nossas preferências. Nessa atividade, a escolha foi pela opção automática.  
+Podemos agora configurar a rede do sistema. Em `Network & Host Name`, selecione o dispositivo de rede disponível e o habilite, clicando no botão `OFF/ON`. Mais abaixo também é possível alterar o Host Name. Feitas as configurações, clicar em Done.  
+Por último, em `Root Password`, podemos definir a senha do usuário root do sistema. Digite uma senha forte e, ao final, clique em Done. Agora também temos a opção de criar outro usuário. Se desejar esta opção, basta preencher as informações que são pedidas. Uma das opções é a de dar direitos de administrador para este novo usuário. Criado o usuário, basta clicar em Done.  
+Após as etapas acima, já podemos iniciar a instalação do Oracle Linux. Clicar em `Begin Installation`. O processo de instalação levará alguns minutos para ser concluído. 
 
 
 
