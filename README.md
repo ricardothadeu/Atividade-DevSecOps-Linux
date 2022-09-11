@@ -75,10 +75,39 @@ Primeiramente, é interessante que as duas VMs recebam endereços IP estáticos,
 
 ### Configurando IP estático
 
-Primeiramente, podemos conferir os detalhes da(s) nossa(s) interface(s) de rede utilizando o comando `ip route`. Um exemplo de saída desse comando seria  ```
-default via 192.168.1.1 dev enp0s3 proto dhcp src 192.168.1.107 metric 100
-192.168.1.0/24 dev enp0s3 proto kernel scope link src 192.168.1.107 metricc 100
+Podemos conferir os detalhes da(s) nossa(s) interface(s) de rede utilizando o comando `ip route`. Um exemplo de saída desse comando seria  
 ```
+default via 192.168.1.1 dev enp0s3 proto dhcp src 192.168.1.107 metric 100  
+192.168.1.0/24 dev enp0s3 proto kernel scope link src 192.168.1.107 metric 100
+```
+
+- 192.168.1.1 é o gateway da rede
+- enp0s3 é a interface de rede.
+- 192.168.1.107 é o endereço IP da VM
+- 192.168.1.0 identifica o endereço IP da rede.
+- /24 é a máscara de rede. Significa que a máscara da rede é 255.255.255.0. Ou seja, os 3 primeiros octetos do endereço IP identificam da rede. O ultimo octeto identifica os hosts dessa rede. A VM, por exemplo, é o host 107.    
+
+Sabendo desses detalhes, podemos configurar um endereço IP estático para a nossa VM. Os arquivos de configuração das interface de rede do Oracle Linux ficam no diretório `/etc/sysconfig/network-scripts/`. Esse diretório contém arquivos com nome `ifcfg-nome_do_dispositivo`. Como visto acima, nossa rede está configurada na interface **enp0s3**. Existem algumas formas de configurar a rede no Linux. Nesta atividade, a opção foi pela ferramente `nmcli`.
+
+Nossa interface será configurada da seguinte forma:  
+- IPADDR=192.168.1.120 (escolha um IP válido na sua rede)
+- NETMASK=255.255.255.0
+- GATEWAY=192.168.1.1
+- DNS1=192.168.1.1
+- DNS2=8.8.8.8  
+
+O comando para configurar a rede através do nmcli é  
+```
+nmcli connection modify enp0s3 ipv4.address 192.168.1.120/24 ipv4.gateway 192.168.1.1 ipv4.dns "192.168.1.1 8.8.8.8" ipv4.method manual
+```
+
+Agora reniciamos a conexão com o comando `nmcli connection up enp0s3`. Podemos conferir se as mudanças foram feitas através do comando `ip address`.  
+Também podemos ler o arquivo `/etc/sysconfig/network-scrips/ifcfg-enp0s3` para conferir se as mudanças foram aplicadas corretamente.
+
+
+
+
+
 
 
 
