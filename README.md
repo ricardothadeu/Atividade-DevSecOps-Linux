@@ -2,6 +2,15 @@
 
 O principal foco desta atividade é configurar e instalar uma máquina virtual (VM) do Oracle Linux 8.6 no VirtualBox.
 
+# Indice   
+  [Obtendo o Oracle Linux 8.6](#obtendo-o-oracle-linux-86)  
+  [Criando a máquina virtual Oracle Linux no VirtualBox](#criando-a-máquina-virtual-oracle-linux-no-virtualbox)  
+  [Instalando o Oracle Linux](#instalando-o-oracle-linux)  
+  [Snapshots](#snapshots)  
+  [Configurando relação de confiança entre VMs](#configurando-relação-de-confiança-entre-vms)    
+  &emsp;[Configurando IP estático](#configurando-ip-estático)  
+  &emsp;[Configurando a relação de confiança](#configurando-a-relação-de-confiança)  
+
 # Obtendo o Oracle Linux 8.6
 
 A iso do Oracle Linux 8.6, assim como outras versões do sistema, pode ser obtida no [site da Oracle](https://yum.oracle.com/oracle-linux-isos.html). 
