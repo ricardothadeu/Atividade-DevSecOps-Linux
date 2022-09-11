@@ -69,6 +69,10 @@ Os snapshots devem ser utilizados com moderação. O acúmulo de snapshots pode 
 Os snapshots são especialmente úteis antes de realizar atualizações, configurações, testes. Em caso de algo errado acontecer, basta restaurar o sistema para o último snapshot criado.  
 Para criar um snapshot, basta ir em `Machine > Take Snapshot`, ou utilizar o atalho `Host+T`.  
 
+# Configurando relação de confiança entre VMs
+Por meio do procotolo SSH (Secure Shell), podemos nos conectar a outra máquina de forma remota. Nesta atividade, foi proposto que se faça a configuração de relação de confiança entre duas VMs. Através da relação de confiança, podemos nos conectar a um servidor remotamente sem que seja necessário digitar a senha do servidor.  
+
+
 
 
 
