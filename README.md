@@ -85,7 +85,7 @@ default via 192.168.1.1 dev enp0s3 proto dhcp src 192.168.1.107 metric 100
 - enp0s3 é a interface de rede.
 - 192.168.1.107 é o endereço IP da VM
 - 192.168.1.0 identifica o endereço IP da rede.
-- /24 é a máscara de rede. Significa que a máscara da rede é 255.255.255.0. Ou seja, os 3 primeiros octetos do endereço IP identificam da rede. O ultimo octeto identifica os hosts dessa rede. A VM, por exemplo, é o host 107.    
+- /24 é a máscara de rede. Significa que a máscara da rede é 255.255.255.0. Ou seja, os 3 primeiros octetos do endereço IP identificam a rede. O ultimo octeto identifica os hosts dessa rede. A VM, por exemplo, é o host 107.    
 
 Sabendo desses detalhes, podemos configurar um endereço IP estático para a nossa VM. Os arquivos de configuração das interface de rede do Oracle Linux ficam no diretório `/etc/sysconfig/network-scripts/`. Esse diretório contém arquivos com nome `ifcfg-nome_do_dispositivo`. Como visto acima, nossa rede está configurada na interface **enp0s3**. Existem algumas formas de configurar a rede no Linux. Nesta atividade, a opção foi pela ferramente `nmcli`.
 
