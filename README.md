@@ -1,6 +1,6 @@
 # Atividade 7 - DevSecOps - Linux
 
-O foco desta atividade é instalar e configurar uma máquina virtual (VM) do Oracle Linux 8.6 no VirtualBox.
+O foco desta atividade é configurar e instalar uma máquina virtual (VM) do Oracle Linux 8.6 no VirtualBox.
 
 # Obtendo o Oracle Linux 8.6
 
@@ -37,15 +37,42 @@ Feitas essas configurações, clique em Ok. De volta à tela inicial do VirtualB
 # Instalando o Oracle Linux
 
 Pressione a tecla Enter na opção `Install Oracle Linux 8.6.0`.  
+#### 1. Selecionando o idioma do sistema operacional
 A primeira etapa é selecionar o idioma. É uma boa práticar instalar o sistema operacional em inglês, pois dessa forma podemos obter novas atualizações de forma mais rápida. Portanto, selecione `English (United States)`.  
+
+#### 2. Selecionando o idioma do teclado
 Agora estamos na tela de sumário da instalação. Podemos começar alterando o idioma do teclado. Em `Keyboard Layout`, clica no sinal de +. Procure a opção `Portuguese (Brazil)` e clique em `Add`. Selecione a opção `English (US)` e clique no sinal de `-`. Clique em `Done`. Desta forma, nosso sistema já entenderá que o teclado é em português.  
+
+#### 3. Configurando data e hora do sistema
 Podemos configurar também a data e a hora do sistema. Selecione a região Américas e a cidade que melhor se encaixa na sua situação. Nesta atividade, foi selecionada a cidade de São Paulo, horário de Brasília. Clique em `Done`.  
+
+#### 4. Selecionando o tipo de instalação
 Prosseguindo em nossa instalação, devemos selecionar o tipo de instalação que desejamos para o sistema operacional. Em `Software Selection`, selecione a opção `Minimal Install`. Ou seja, estamos instalando o Oracle Linux sem interface gráfica. Clique em `Done`.  
+
+#### 5. Selecionando disco de instalação
 O próximo passo é selecionar o disco no qual será feita a instalação do Oracle Linux. Para isso, vamos na opção `Installation Destination`. Em `Local Standard Disks`, selecionamos o disco disponível, que foi o disco que criamos alguns passos atrás. Em `Storage Configuration`, podemos selecionar a opção 
 `Automatic`, na qual o próprio sistema decide o tamanho das partições que serão criadas no disco, ou a opção `Custom`, na qual nós criamos as partições de acordo com nossas preferências. Nessa atividade, a escolha foi pela opção automática.  
+
+#### 6. Configurando rede e host name
 Podemos agora configurar a rede do sistema. Em `Network & Host Name`, selecione o dispositivo de rede disponível e o habilite, clicando no botão `OFF/ON`. Mais abaixo também é possível alterar o Host Name. Feitas as configurações, clicar em Done.  
+
+#### 7. Criando senha do root e novos usuários
 Por último, em `Root Password`, podemos definir a senha do usuário root do sistema. Digite uma senha forte e, ao final, clique em Done. Agora também temos a opção de criar outro usuário. Se desejar esta opção, basta preencher as informações que são pedidas. Uma das opções é a de dar direitos de administrador para este novo usuário. Criado o usuário, basta clicar em Done.  
-Após as etapas acima, já podemos iniciar a instalação do Oracle Linux. Clicar em `Begin Installation`. O processo de instalação levará alguns minutos para ser concluído. 
+
+#### 8. Concluindo instalação
+Após as etapas acima, já podemos iniciar a instalação do Oracle Linux. Clicar em `Begin Installation`. O processo de instalação levará alguns minutos para ser concluído. Quando o processo terminar, devemos reiniciar o sistema. Clicar em `Reboot System`. Nossa máquina virtual com o Oracle Linux 8.6 está pronta para ser utilizada.  
+
+
+# Snapshots
+Neste momento, o uso de snapshots já começa a ser interessante. O snapshot é uma poderosa ferramenta do VirtualBox. Por meio dos snapshots, conseguimos salvar as configurações e dados atuais do sistema. Desta forma, depois podemos restaurar todo o sistema para o exato ponto em que o snapshot foi criado.  
+Os snapshots devem ser utilizados com moderação. O acúmulo de snapshots pode fazer com que a VM se comporte de forma inadequada, além de ser um desperdício de espaço. Os snapshots não são recomendados para restaurações de longo prazo.  
+Os snapshots são especialmente úteis antes de realizar atualizações, configurações, testes. Em caso de algo errado acontecer, basta restaurar o sistema para o último snapshot criado.  
+Para criar um snapshot, basta ir em `Machine > Take Snapshot`, ou utilizar o atalho `Host+T`.  
+
+
+
+
+
 
 
 
