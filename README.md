@@ -1,6 +1,6 @@
 # Atividade 7 - DevSecOps - Linux
 
-O foco desta atividade é configurar e instalar uma máquina virtual (VM) do Oracle Linux 8.6 no VirtualBox.
+O principal foco desta atividade é configurar e instalar uma máquina virtual (VM) do Oracle Linux 8.6 no VirtualBox.
 
 # Obtendo o Oracle Linux 8.6
 
@@ -41,10 +41,10 @@ Pressione a tecla Enter na opção `Install Oracle Linux 8.6.0`.
 A primeira etapa é selecionar o idioma. É uma boa práticar instalar o sistema operacional em inglês, pois dessa forma podemos obter novas atualizações de forma mais rápida. Portanto, selecione `English (United States)`.  
 
 #### 2. Selecionando o idioma do teclado
-Agora estamos na tela de sumário da instalação. Podemos começar alterando o idioma do teclado. Em `Keyboard Layout`, clica no sinal de +. Procure a opção `Portuguese (Brazil)` e clique em `Add`. Selecione a opção `English (US)` e clique no sinal de `-`. Clique em `Done`. Desta forma, nosso sistema já entenderá que o teclado é em português.  
+Em `Keyboard Layout`, clica no sinal de +. Procure a opção `Portuguese (Brazil)` e clique em `Add`. Selecione a opção `English (US)` e clique no sinal de `-`. Clique em `Done`.
 
 #### 3. Configurando data e hora do sistema
-Podemos configurar também a data e a hora do sistema. Selecione a região Américas e a cidade que melhor se encaixa na sua situação. Nesta atividade, foi selecionada a cidade de São Paulo, horário de Brasília. Clique em `Done`.  
+Selecione a região Américas e a cidade que melhor se encaixa na sua situação. Nesta atividade, foi selecionada a cidade de São Paulo, horário de Brasília. Clique em `Done`.  
 
 #### 4. Selecionando o tipo de instalação
 Prosseguindo em nossa instalação, devemos selecionar o tipo de instalação que desejamos para o sistema operacional. Em `Software Selection`, selecione a opção `Minimal Install`. Ou seja, estamos instalando o Oracle Linux sem interface gráfica. Clique em `Done`.  
@@ -54,7 +54,7 @@ O próximo passo é selecionar o disco no qual será feita a instalação do Ora
 `Automatic`, na qual o próprio sistema decide o tamanho das partições que serão criadas no disco, ou a opção `Custom`, na qual nós criamos as partições de acordo com nossas preferências. Nessa atividade, a escolha foi pela opção automática.  
 
 #### 6. Configurando rede e host name
-Podemos agora configurar a rede do sistema. Em `Network & Host Name`, selecione o dispositivo de rede disponível e o habilite, clicando no botão `OFF/ON`. Mais abaixo também é possível alterar o Host Name. Feitas as configurações, clicar em Done.  
+Em `Network & Host Name`, selecione o dispositivo de rede disponível e o habilite, clicando no botão `OFF/ON`. Mais abaixo também é possível alterar o Host Name. Feitas as configurações, clicar em Done.  
 
 #### 7. Criando senha do root e novos usuários
 Por último, em `Root Password`, podemos definir a senha do usuário root do sistema. Digite uma senha forte e, ao final, clique em Done. Agora também temos a opção de criar outro usuário. Se desejar esta opção, basta preencher as informações que são pedidas. Uma das opções é a de dar direitos de administrador para este novo usuário. Criado o usuário, basta clicar em Done.  
@@ -68,6 +68,8 @@ Neste momento, o uso de snapshots já começa a ser interessante. O snapshot é 
 Os snapshots devem ser utilizados com moderação. O acúmulo de snapshots pode fazer com que a VM se comporte de forma inadequada, além de ser um desperdício de espaço. Os snapshots não são recomendados para restaurações de longo prazo.  
 Os snapshots são especialmente úteis antes de realizar atualizações, configurações, testes. Em caso de algo errado acontecer, basta restaurar o sistema para o último snapshot criado.  
 Para criar um snapshot, basta ir em `Machine > Take Snapshot`, ou utilizar o atalho `Host+T`.  
+
+
 
 
 
