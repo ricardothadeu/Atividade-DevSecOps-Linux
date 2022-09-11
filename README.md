@@ -71,7 +71,14 @@ Para criar um snapshot, basta ir em `Machine > Take Snapshot`, ou utilizar o ata
 
 # Configurando relação de confiança entre VMs
 Por meio do procotolo SSH (Secure Shell), podemos nos conectar a outra máquina de forma remota. Nesta atividade, foi proposto que se faça a configuração de relação de confiança entre duas VMs. Através da relação de confiança, podemos nos conectar a um servidor remotamente sem que seja necessário digitar a senha do servidor.  
+Primeiramente, é interessante que as duas VMs recebam endereços IP estáticos, pois desta forma é garantido que não perderemos a conexão por causa de uma mudança no IP dinâmico de uma das máquinas.
 
+### Configurando IP estático
+
+Primeiramente, podemos conferir os detalhes da(s) nossa(s) interface(s) de rede utilizando o comando `ip route`. Um exemplo de saída desse comando seria  ```
+default via 192.168.1.1 dev enp0s3 proto dhcp src 192.168.1.107 metric 100
+192.168.1.0/24 dev enp0s3 proto kernel scope link src 192.168.1.107 metricc 100
+```
 
 
 
