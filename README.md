@@ -104,6 +104,34 @@ nmcli connection modify enp0s3 ipv4.address 192.168.1.120/24 ipv4.gateway 192.16
 Agora reniciamos a conexão com o comando `nmcli connection up enp0s3`. Podemos conferir se as mudanças foram feitas através do comando `ip address`.  
 Também podemos ler o arquivo `/etc/sysconfig/network-scrips/ifcfg-enp0s3` para conferir se as mudanças foram aplicadas corretamente.
 
+### Configurando a relação de confiança
+
+Após realizar nas duas VMs as configurações da seção anterior, podemos configurar a relação de confiança entre elas.  
+A relação de confiança é baseada no uso de chaves públicas. Uma chave pública é gerada na máquina A e copiada para a máquina B. A partir disso, a conexão via SSH de A para B não exigirá mais o uso de senha, pois a autenticação da conexão é feita pelas chaves públicas que as máquinas compartilham.  
+As VMs possuem as seguintes características:
+
+|VM | Usuário | IP          |
+|---|---------| ----------- |
+|1  | ricardo |192.168.1.120|
+|2  | thadeu  |192.168.1.150|
+
+Para gerar a chave pública na VM 1, utilizamos o comando  
+```
+ssh-keygen -t rsa
+```
+Pressione a tecla `Enter` para as perguntas que são feitas. As chaves pública e privada foram geradas. Agora precisamos copiar a chave pública para a VM 2. Para isso, é necessário o comando  
+```
+ssh-copy-id usuario@ip
+```
+No caso dessa atividade, ficaria  
+```
+ssh-copy-id thadeu@192.168.1.150
+```
+Agora é necessário digitar a senha de acesso do usuário thadeu. Após isso, a senha foi copiada para a VM 2. Teste a conexão SSH  
+```
+ssh thadeu@192.168.1.150
+```
+Note que a senha de acesso não foi exigida. A relação de confiança foi configurada. Agora basta repetir o processo da VM 2 para a VM 1.
 
 
 
