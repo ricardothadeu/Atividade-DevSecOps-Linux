@@ -1,6 +1,7 @@
 # Atividade 7 - DevSecOps - Linux
 
 O principal foco desta atividade é configurar e instalar uma máquina virtual (VM) do Oracle Linux 8.6 no VirtualBox.
+Compass.uol - DevSecOps
 
 # Indice   
   [Obtendo o Oracle Linux 8.6](#obtendo-o-oracle-linux-86)  
