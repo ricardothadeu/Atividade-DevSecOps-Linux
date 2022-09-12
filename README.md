@@ -72,7 +72,7 @@ Após as etapas acima, já podemos iniciar a instalação do Oracle Linux. Clica
 
 
 # Snapshots
-Neste momento, o uso de snapshots já começa a ser interessante. O snapshot é uma poderosa ferramenta do VirtualBox. Por meio dos snapshots, conseguimos salvar as configurações e dados atuais do sistema. Desta forma, depois podemos restaurar todo o sistema para o exato ponto em que o snapshot foi criado.  
+Neste momento, o uso de snapshots já começa a ser interessante. O snapshot é uma poderosa ferramenta do VirtualBox. Por meio dos snapshots, conseguimos salvar o estado atual das configurações e dados do sistema. Desta forma, depois podemos restaurar todo o sistema para o exato ponto em que o snapshot foi criado.  
 Os snapshots devem ser utilizados com moderação. O acúmulo de snapshots pode fazer com que a VM se comporte de forma inadequada, além de ser um desperdício de espaço. Os snapshots não são recomendados para restaurações de longo prazo.  
 Os snapshots são especialmente úteis antes de realizar atualizações, configurações, testes. Em caso de algo errado acontecer, basta restaurar o sistema para o último snapshot criado.  
 Para criar um snapshot, basta ir em `Machine > Take Snapshot`, ou utilizar o atalho `Host+T`.  
