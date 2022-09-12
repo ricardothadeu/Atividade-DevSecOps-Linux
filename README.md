@@ -3,7 +3,7 @@
 O principal foco desta atividade é configurar e instalar uma máquina virtual (VM) do Oracle Linux 8.6 no VirtualBox.
 Compass.uol - DevSecOps
 
-# Indice   
+# Sumário   
   [Obtendo o Oracle Linux 8.6](#obtendo-o-oracle-linux-86)  
   [Criando a máquina virtual Oracle Linux no VirtualBox](#criando-a-máquina-virtual-oracle-linux-no-virtualbox)  
   [Instalando o Oracle Linux](#instalando-o-oracle-linux)  
