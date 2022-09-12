@@ -31,9 +31,11 @@ A máquina virtual foi criada. Agora devemos fazer algumas configurações nessa
 Aqui podemos fazer algumas configurações interessantes. Por exemplo, em `System > Motherboard` podemos alterar a quantidade de memória alocada para a máquina virtual.  
 Uma etapa essencial é carregar na máquina virtual a iso do Oracle Linux que foi baixada anteriormente. Para isso, vamos em `Storage`  
 
-INSERIR IMAGEM  
+<p align="center">
+  <img src="imagem1.png" width="600" height="400">
+</p>
 
-Selecionamos a iso do Oracle Linux.  
+Selecionamos a iso do Oracle Linux, que baixamos anteriormente.   
 
 Outra configuração importante é a da rede da máquina virtual. Para configurá-la, basta ir em `Network`. Em `Adapter 1`, vamos em `Attached to` e selecionamos a opção `Bridge Adapter`. Desta forma, nossa VM terá conexão com a internet, utilizando o driver de rede do Host, ou seja, da máquina que está rodando o VirtualBox.  
 
