@@ -18,11 +18,9 @@ Realizado o download da iso, podemos avançar para a etapa de criação e instal
 
 # Criando a máquina virtual Oracle Linux no VirtualBox
 
-Na tela inicial do VirtualBox, clique em New, ou utilize o atalho Ctrl+N. Realizaremos algumas etapas para criar a máquina virtual.
+Na tela inicial do VirtualBox, clique em New, ou utilize o atalho Ctrl+N. Realizaremos algumas etapas para criar a máquina virtual.  
 
-INSERIR IMAGEM   
-
-1. O nome da VM é arbitrário. Após selecionar as opções que correspondem ao Oracle Linux, clicar em Next.  
+1. Dê um nome para a VM. Após selecionar as opções que correspondem ao Oracle Linux, clicar em Next.  
 2. Agora deve-se escolher a quantidade de memória RAM alocada para a VM. O recomendado é alocar no mínimo 2048 MB (2GB) para a VM. Definida a quantidade de RAM alocada, clicar em Next.  
 3. Nessa etapa o VirtualBox pergunta se desejamos criar um disco rígido virtual ou usar algum já existente. Mantenha a opção padrão, `create a virtual hard disk now`. Clicar em Next.  
 4. O VirtualBox deseja saber qual o tipo de disco rígido virtual você deseja criar. Caso você tenha a intenção de usar essa máquina virtual em outro software de virtualização, escolha a opção VHD. Caso contrário, a opção VDI pode ser mantida. Clicar em Next.  
@@ -38,8 +36,6 @@ INSERIR IMAGEM
 Selecionamos a iso do Oracle Linux.  
 
 Outra configuração importante é a da rede da máquina virtual. Para configurá-la, basta ir em `Network`. Em `Adapter 1`, vamos em `Attached to` e selecionamos a opção `Bridge Adapter`. Desta forma, nossa VM terá conexão com a internet, utilizando o driver de rede do Host, ou seja, da máquina que está rodando o VirtualBox.  
-
-INSERIR IMAGEM
 
 Feitas essas configurações, clique em Ok. De volta à tela inicial do VirtualBox, podemos selecionar nossa VM e clicar em `Start`.  
 
@@ -141,22 +137,3 @@ Agora é necessário digitar a senha de acesso do usuário thadeu. Após isso, a
 ssh thadeu@192.168.1.150
 ```
 Note que a senha de acesso não foi exigida. A relação de confiança foi configurada. Agora basta repetir o processo da VM 2 para a VM 1.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
